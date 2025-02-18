@@ -40,6 +40,7 @@ const Contact = () => {
       contact: "enasup@techspira.co.in",
       icon: <MessageCircle className="w-6 h-6" />,
       link: "mailto:enasup@techspira.co.in",
+      buttonText: "Send us an email",
     },
     {
       title: "Visit us",
@@ -47,34 +48,50 @@ const Contact = () => {
       contact: "View on Google Maps",
       icon: <MapPin className="w-6 h-6" />,
       link: "https://maps.app.goo.gl/hEGTaqjz1zb5Kd2T7",
+      buttonText: "Open in Maps",
     },
     {
       title: "Call us",
-      description: "Mon-Fri from 8am to 5pm.",
+      description: "Mon-Fri from 10am to 5pm.",
       contact: "+91 9035473867",
       icon: <Phone className="w-6 h-6" />,
       link: "https://wa.me/919035473867",
+      buttonText: "Chat on WhatsApp",
     },
   ];
 
-  //   const faqs = [
-  //     {
-  //       question: "Is there a free trial available?",
-  //       answer:
-  //         "Yes, you can try our service for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
-  //     },
-  //     {
-  //       question: "Can I change my plan later?",
-  //       answer:
-  //         "Yes, you can change your plan at any time. Upgrades take effect immediately, while downgrades take effect at the start of the next billing cycle.",
-  //     },
-  //     // Add more FAQs as needed
-  //   ];
+  const handleClick = (link) => {
+    window.open(link, "_blank", "noopener noreferrer");
+  };
+
+  // const faqs = [
+  //   {
+  //     question: "Is there a free trial available?",
+  //     answer:
+  //       "Yes, you can try our service for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+  //   },
+  //   {
+  //     question: "Can I change my plan later?",
+  //     answer:
+  //       "Yes, you can change your plan at any time. Upgrades take effect immediately, while downgrades take effect at the start of the next billing cycle.",
+  //   },
+  //   {
+  //     question: "Is there a free trial available?",
+  //     answer:
+  //       "Yes, you can try our service for free for 30 days. If you want, we'll provide you with a free, personalized 30-minute onboarding call to get you up and running as soon as possible.",
+  //   },
+  //   {
+  //     question: "Can I change my plan later?",
+  //     answer:
+  //       "Yes, you can change your plan at any time. Upgrades take effect immediately, while downgrades take effect at the start of the next billing cycle.",
+  //   },
+  //   // Add more FAQs as needed
+  // ];
 
   return (
     <div className="bg-white">
       {/* Main Content */}
-      <main className="h-full  max-w-7xl mx-auto px-4">
+      <main className="py-12 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="pt-16 text-center mb-16">
           <div className="mb-4">
@@ -89,25 +106,17 @@ const Contact = () => {
           {contactMethods.map((method, index) => (
             <div
               key={index}
-              className="border rounded-lg p-6 bg-white shadow-sm"
+              className="text-center flex flex-col items-center border rounded-lg p-6 bg-white shadow-sm"
             >
-              <div className="mb-4">{method.icon}</div>
+              <div className="mb-4 text-2xl">{method.icon}</div>
               <h3 className="font-semibold mb-1">{method.title}</h3>
               <p className="text-gray-600 mb-4">{method.description}</p>
-              {method.link ? (
-                <a
-                  href={method.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-900 underline font-medium"
-                >
-                  {method.contact}
-                </a>
-              ) : (
-                <span className="text-gray-900 font-medium">
-                  {method.contact}
-                </span>
-              )}
+              <button
+                onClick={() => handleClick(method.link)}
+                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-gray-800 transition-colors"
+              >
+                {method.buttonText}
+              </button>
             </div>
           ))}
         </div>

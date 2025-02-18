@@ -76,13 +76,9 @@ function App() {
     }
   };
 
-  // const scrollToForm = () => {
-  //   document.querySelector("#apply").scrollIntoView({ behavior: "smooth" });
-  // };
-
   function Main() {
     return (
-      <>
+      <div>
         <div className="hero">
           <span className="tag-label">WELCOME TO TECHSPIRA</span>
           <h1>
@@ -227,7 +223,7 @@ function App() {
             </form>
           </div>
         </div>
-      </>
+      </div>
     );
   }
 
