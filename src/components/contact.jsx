@@ -91,7 +91,7 @@ const Contact = () => {
   return (
     <div className="bg-white">
       {/* Main Content */}
-      <main className="py-12 max-w-7xl mx-auto px-4">
+      <main className=" py-12 max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="pt-16 text-center mb-16">
           <div className="mb-4">
@@ -113,7 +113,7 @@ const Contact = () => {
               <p className="text-gray-600 mb-4">{method.description}</p>
               <button
                 onClick={() => handleClick(method.link)}
-                className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-gray-800 transition-colors"
+                className="px-4 py-2 bg-orange-300 text-white rounded-lg hover:bg-blue-500 duration-200 ease-in-out delay-50 transition-colors hover:scale-105 animate-bounce"
               >
                 {method.buttonText}
               </button>
