@@ -1,36 +1,36 @@
-import { useState } from "react";
+// import { useState } from "react";
 import {
   MessageCircle,
   MapPin,
   Phone,
   Smile,
-  ChevronDown,
-  ChevronUp,
+  // ChevronDown,
+  // ChevronUp,
 } from "lucide-react";
 
-const FAQ = ({ question, answer }) => {
-  const [isOpen, setIsOpen] = useState(false);
+// const FAQ = ({ question, answer }) => {
+//   const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div className="border-b">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full py-4 flex items-center justify-between text-left"
-      >
-        <div className="flex items-center gap-2">
-          <Smile className="w-5 h-5" />
-          <span className="font-medium">{question}</span>
-        </div>
-        {isOpen ? (
-          <ChevronUp className="w-5 h-5" />
-        ) : (
-          <ChevronDown className="w-5 h-5" />
-        )}
-      </button>
-      {isOpen && <div className="pb-4 text-gray-600">{answer}</div>}
-    </div>
-  );
-};
+//   return (
+//     <div className="border-b">
+//       <button
+//         onClick={() => setIsOpen(!isOpen)}
+//         className="w-full py-4 flex items-center justify-between text-left"
+//       >
+//         <div className="flex items-center gap-2">
+//           <Smile className="w-5 h-5" />
+//           <span className="font-medium">{question}</span>
+//         </div>
+//         {isOpen ? (
+//           <ChevronUp className="w-5 h-5" />
+//         ) : (
+//           <ChevronDown className="w-5 h-5" />
+//         )}
+//       </button>
+//       {isOpen && <div className="pb-4 text-gray-600">{answer}</div>}
+//     </div>
+//   );
+// };
 
 const Contact = () => {
   const contactMethods = [
