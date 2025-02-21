@@ -4,6 +4,8 @@ import Img from "../src/assets/image.js";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header.jsx";
 import Contact from "./components/contact.jsx";
+import About from "./components/About.jsx";
+import Domain from "./components/Domain.jsx";
 
 function App() {
   const [name, setName] = useState("");
@@ -233,6 +235,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Main />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/domain" element={<Domain domains={domains} />} />
       </Routes>
     </>
   );
