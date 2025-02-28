@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Img from "../assets/image.js"; 
+import Img from "../assets/image.js";
 
 function Header() {
   const scrollToForm = () => {
@@ -25,7 +25,9 @@ function Header() {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
-        <button onClick={scrollToForm}>Apply</button>
+        <button  onClick={scrollToForm}>
+          Apply
+        </button>
       </nav>
     </header>
   );

