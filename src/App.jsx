@@ -32,7 +32,7 @@ function Main({
           their way to the stars
         </h1>
         <p>Join TechSpira and launch your career in technology</p>
-        <button id="about">
+        <button className="btn" id="about">
           <a href="#apply">Start Your Journey →</a>
         </button>
       </div>
