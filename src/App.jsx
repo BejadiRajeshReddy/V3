@@ -81,7 +81,7 @@ function Main({
 
           <form
             className="form-content"
-            action="https://formsubmit.co/rockyrocky9526@gmail.com"
+            action="https://formsubmit.co/enasup@techspira.co.in"
             method="POST"
             encType="multipart/form-data"
             onSubmit={handleSubmit}
